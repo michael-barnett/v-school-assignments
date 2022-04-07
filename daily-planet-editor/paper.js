@@ -40,14 +40,15 @@ function howAttractedIsLoisLaneToMe() {
 
 console.log(howAttractedIsLoisLaneToMe()) ;
 
-var clarkKent = true;
-var superman = false;
+var isClarkKent = true;
+var isSuperman = false;
 
-while (clarkKent) {
+while (isClarkKent) {
     console.log("I'm just a nerdy columnist");
     var phoneBoothQuickChange = Math.random();
-    if (phoneBoothQuickChange>= 0.5) {
-        clarkKent = false;
-        superman = true;
-        console.log("Now I'm Superman!");}
+    if (phoneBoothQuickChange >= 0.5) {
+        isClarkKent = false;
+        isSuperman = true;
+        console.log("Now I'm Superman!");
+    }
 }
