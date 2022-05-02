@@ -1,0 +1,87 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    color: blanchedalmond;
+    font-size: 25px;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+@media only screen and (max-width: 500px){
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
+    }
+
+    .grid-container > div:nth-child(1n) {
+        background-color: rgb(71, 71, 71);
+    }
+    .grid-container > div:nth-child(2n) {
+        background-color: rgb(41, 41, 48);
+    }
+    .grid-container > div:nth-child(3n) {
+        background-color: rgb(32, 34, 32);
+    }
+    .grid-container > div:nth-child(4n) {
+        background-color: rgb(85, 85, 85);
+    }
+    .grid-container > div:nth-child(5n) {
+        background-color: rgb(187, 187, 187);
+    }
+}
+@media only screen and (min-width: 501px){
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+    }
+
+    .grid-container > div:nth-child(1n) {
+        background-color: rgb(71, 71, 71);
+        grid-column: 1/-1;
+    }
+    .grid-container > div:nth-child(2n) {
+        background-color: rgb(41, 41, 48);
+        grid-column: 1/2;
+    }
+    .grid-container > div:nth-child(3n) {
+        background-color: rgb(32, 34, 32);
+        grid-column: 2/-1;
+    }
+    .grid-container > div:nth-child(4n) {
+        background-color: rgb(85, 85, 85);
+        grid-column: 1/-1;
+    }
+    .grid-container > div:nth-child(5n) {
+        background-color: rgb(187, 187, 187);
+        grid-column: 1/-1;
+    }
+}
+@media only screen and (min-width: 1180px){
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 40px 120px 40px;
+        grid-gap: 10px;
+    }
+
+    .grid-container > div:nth-child(1n) {
+        background-color: rgb(71, 71, 71);
+        grid-column: 1/-1;
+    }
+    .grid-container > div:nth-child(2n) {
+        background-color: rgb(41, 41, 48);
+        grid-column: 1/2;
+    }
+    .grid-container > div:nth-child(3n) {
+        background-color: rgb(32, 34, 32);
+        grid-column: 2/4;
+    }
+    .grid-container > div:nth-child(4n) {
+        background-color: rgb(85, 85, 85);
+        grid-column: 4/-1;
+    }
+    .grid-container > div:nth-child(5n) {
+        background-color: rgb(187, 187, 187);
+        grid-column: 1/-1;
+    }
+}

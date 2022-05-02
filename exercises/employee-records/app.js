@@ -18,11 +18,10 @@
 
 let employees = []
 
-function Employee(name, jobTitle, salary, status){
+function Employee(name, jobTitle, salary, status = 'Full Time'){
     this.name = name
     this.jobTitle = jobTitle
     this.salary = salary
-    this.status = "Full Time"
     this.status = status
     this.printEmployeeForm = function(){
         console.log("Name: " + name + ";" + " Job Title: " + jobTitle + ";" + " Salary: " + salary + ";" + " Job Status: "  + status + ";")
