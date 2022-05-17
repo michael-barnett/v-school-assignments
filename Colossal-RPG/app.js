@@ -15,7 +15,7 @@ let monsters = [
     {name: 'vampire', hp: 10, attackMin: 2, attackMax: 8}
 ]
 let player = {hp: 10, attack: 2}
-let walksLeft = 10
+let walksLeft = 2
 let mobNumber = 0
 let equippedWeapon = inventory[0]
 let trash = {name: 'trash', description: "Not much going on here. it's useless trash."}
@@ -25,14 +25,16 @@ function drinkPotion(){
     player.hp = player.hp + 5;
 }
 let refinedSteelSword = {name: 'Refined Steel Sword', attackMin: 2, attackMax: 5, description: 'An elegant refined steel sword. How it has stayed in such great shape is a mystery.'}
+//pushed a hp pot for testing
 inventory.push(healthPotion)
+//walk function, basis for game
 function walk(){
     let walkChance = Math.floor(Math.random() * 100)
     if(walkChance < 33){
         doCombat()
     }
     if(walkChance > 33){
-        walksLeft--
+        walksLeft--;
         let walkMessage = Math.random() * 100;
         if (walkMessage < 33){
             console.log("You feel yourself getting closer to the exit. You advance forward.");
@@ -44,16 +46,18 @@ function walk(){
             console.log("Your face touches a cobweb. Eek! You press onward.");
         }
     }    
-    if(walksLeft === 0){
+    if(walksLeft <= 0){
         console.clear();
         console.log('You see a light at the end of the caves, and step forward into the beautiful sunlight.');
         console.log('Congratulations! You won!');
         process.exit()
     }
 }
+//status function
 function checkStatus(){
     console.log("Name: " + playerName + "; Health: " + player.hp + "; Current Weapon: " + equippedWeapon.name)
 }
+//showing inventory function
 function showInventory(){
     console.log(inventory);
     console.log("You open your bag.")
@@ -77,6 +81,7 @@ function showInventory(){
     else{equippedWeapon = inventory[inventoryCheck]}
     }
 
+//chance of player getting into combat while walking
 function doCombat(){
     let mobVarietyChance = Math.random() * 100;
     if (mobVarietyChance < 70){
@@ -91,13 +96,16 @@ function doCombat(){
         combat()}
 }
 
+//monster attack damage calc
 function monsterAttackDamage(monsterMin, monsterMax){
     return Math.floor(Math.random() * (monsterMax - monsterMin + 1)) + monsterMin;
 }
+//player attack damage calc
 function playerAttackDamage(playerMin, playerMax){
     return Math.floor(Math.random() * (playerMax - playerMin + 1)) + playerMin;
 }
 
+//Combat system
 function combat(){
     console.log("You encounter a " + monsters[mobNumber].name + "!");
     let mobHealth = monsters[mobNumber].hp;
@@ -162,6 +170,7 @@ function combat(){
      }
 }
 
+// While loop for basis of game
 while (player.hp > 0){
     let userInput = readlineSync.keyIn("Check [S]tatus || [W]alk || Check [I]nventory >", {limit: 'swix'});
     if(userInput == 'w'){
@@ -178,7 +187,7 @@ while (player.hp > 0){
         process.exit()
     }
 }
-
+// Death Condition/Message
 if (player.hp <= 0){
     console.clear();
     console.log("Oh no, you've perished!");

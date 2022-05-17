@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+    <form name="airlineForm">
+        <input type="text" name="firstName" placeholder="First Name">
+        <br>
+        <input type="text" name="lastName" placeholder="Last Name">
+        <br>
+        <input type="number" name="age" placeholder="Age">
+        <br>
+        Male<input type="radio" name="gender" value="male">
+        Female<input type="radio" name="gender" value="female">
+        Other<input type="radio" name="gender" value="other">
+        <br>
+        Destination:<select name="destination">
+            <option>Paris</option>
+            <option>London</option>
+            <option>Atlanta</option>
+        </select>
+        <br>
+        Dietary restrictions: <br>
+        Vegetarian:<input type="checkbox" name="diet" value="vegetarian"/>
+        Vegan:<input type="checkbox" name="diet" value="vegan"/>
+        Kosher:<input type="checkbox" name="diet" value="kosher"/>
+        <button>Submit</button>
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>

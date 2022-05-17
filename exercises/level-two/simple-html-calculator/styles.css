@@ -1,0 +1,18 @@
+#addDiv {
+    width: 480px;
+    background-color: rgb(221, 127, 127);
+    margin-left: 50px;
+}
+
+#subDiv{
+    margin-left: 50px;
+    background-color: aqua;
+    width: 480px;
+}
+
+#multDiv{
+    margin-left: 50px;
+    background-color: blue;
+    width: 480px;
+    color: aliceblue;
+}

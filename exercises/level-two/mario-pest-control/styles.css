@@ -1,0 +1,57 @@
+html {
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+#containerBody {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% auto 5%;
+}
+
+#containerBody > .header {
+    grid-row: 1/2;
+    background-color: blue;
+    color: red;
+    border-bottom: 5px solid black;
+}
+
+#containerBody > .body {
+    grid-row: 2/3;
+}
+
+#containerBody > .footer {
+    grid-row: 3/-1;
+    background-color: aqua;
+    border-top: 5px solid black;
+}
+
+.footer > div {
+    display: flex;
+    justify-content: space-around;
+}
+
+.header > div {
+    display: flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+.body > div {
+    display: flex;
+    justify-content: center;
+}
+
+.body > div > ul > li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#coinTotal {
+    color: gold;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css"/>
+</head>
+<body id="containerBody">
+        <div class="header">
+            <div>
+                <h1>Mario's Pest Control</h1>
+            </div>
+        </div>
+        <div class="body">
+            <div>
+                <ul>
+                    <li>
+                        Goombas: 5 coins each <img src="goomba-removebg-preview.png" height="100px">
+                        Number Caught:<input type="number" id="goombaNum" value="0">
+                    </li>
+                    <li>
+                        Koopa Troopas: 11 coins each <img src="koopatroopa-removebg-preview.png" height="100px">
+                        Number Caught:<input type="number" id="koopaNum" value="0">
+                    </li>
+                    <li>
+                        Bob-ombs: 7 coins each <img src="bobomb-removebg-preview.png" height="100px">
+                        Number Caught:<input type="number" id="bobNum" value="0">
+                    </li>
+                </ul>
+            </div>
+            <div><form id="total"><button id="subButton">Calculate!</button></form></div>
+            <div>
+                <h1>The Total number of coins to pay:<h1 id="coinTotal"></h1></h1>
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+            <p>Email: marioman@gmail.com</p>
+            <p>Website: mariopestcontrol.com</p>
+            <p>Address: 123 Goomba Street, Another-Castle, JP</p>
+            </div>
+        </div>
+    <script src="app.js"></script>
+</body>
+</html>
