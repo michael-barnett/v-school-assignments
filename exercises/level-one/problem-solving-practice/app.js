@@ -10,15 +10,15 @@
 
 // getLargest(6, 8, 3, 20, 45, 2, 10, 15)
 
-// function getCharacter(array, letter){
-//     for(let i = 0; i < array.length; i++){
-//          for(let j = 0; j < array[i].length; j++){
-//              if(array[i][j] === letter){
-//                  console.log(array[i])
-//              }
-//          }
-//     }
-// }
+function getCharacter(array, letter){
+    for(let i = 0; i < array.length; i++){
+         for(let j = 0; j < array[i].length; j++){
+             if(array[i][j] === letter){
+                 console.log(array[i])
+             }
+         }
+    }
+}
 
 // getCharacter(["hey", "how", "are", "you?", "though!"], "h")
 

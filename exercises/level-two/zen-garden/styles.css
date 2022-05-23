@@ -1,0 +1,424 @@
+/* * {
+    font-family: 'Libre Baskerville', sans-serif;
+} */
+
+h2, h1 {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: normal;
+}
+body, html {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Libre Baskerville', sans-serif;
+}
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        background-image: url('forest.jpg');
+    }
+    
+    .header-top {
+        display: flex;
+        background-color: rgba(71, 167, 135, 0.5);
+        height: 140px;
+        justify-content: center;
+        padding-top: 30px;
+        grid-row: 1 / 2;
+        backdrop-filter: blur(4px);
+    }
+    .header-top > div > h1 {
+        font-size: 2em;
+        margin-bottom: 2px;
+        font-family: 'Julius Sans One', sans-serif;
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+    .header-top > div > p {
+        font-size: 1.1em;
+        margin-top: 2px;
+        font-family: 'Libre Baskerville', sans-serif;
+        font-style: italic;
+        color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+    }
+    #oroboros {
+        padding-top: 10px;
+    }
+    
+    .header-bot {
+        background-color: rgba(71, 167, 135, 0.5);
+        justify-content: space-around;
+        grid-row: 2 / 3;
+        font-family: 'Libre Baskerville', sans-serif;
+        backdrop-filter: blur(4px);
+        transition-property: all;
+        transition-duration: 500ms;
+    }
+    .header-bot:hover {
+        background-color: rgba(186, 204, 198, 0.582);
+    }
+    
+    .header-bot > div {
+        display: flex;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.247);
+        height: 40px;
+        padding-top: 25px;
+    }
+    .header-bot > div > span {
+        height: 20px;
+        color: rgba(255, 255, 255, 0.9);
+        text-transform: uppercase;
+        font-weight: normal;
+        font-family: 'Julius Sans One', sans-serif;
+    }
+    .body-top {
+        background-color: aliceblue;
+        grid-row: 3 / 4;
+    }
+    .body-top > div {
+        display: flex;
+        justify-content: center;
+        margin: 40px 140px;
+    }
+    .body-top-companion {
+        background-color: rgb(222, 225, 228);
+    }
+    .body-top-companion > ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+        margin: 0;
+    }
+    .body-top-companion > ul > li {
+        list-style: none;
+        padding: 20px 70px;
+        border-bottom: 1px solid rgba(41, 53, 46, 0.712);
+        color: #134347;
+        font-style: normal;
+        text-transform: uppercase;
+        font-family: 'Julius Sans One', sans-serif;
+    }
+    #fancy-by {
+        color: #999999a2;
+        font-family: 'Libre Baskerville', sans-serif;
+        font-style: italic;
+        text-transform: none;
+        font-size: .8em;
+    }
+    #fancy-name {
+        color: #4f6654;
+        font-family: 'Libre Baskerville', sans-serif;
+        font-style: normal;
+        text-transform: none;
+        font-size: .9em;
+    }
+    #designer-div {
+        border-bottom: 2px solid black;
+        padding-right: 120px;
+    }
+    .body-mid {
+        background-color: rgba(175, 212, 200, 0.9);
+        grid-row: 4 / 5;
+        backdrop-filter: blur(3px);
+    }
+    .body-mid > div {
+        display: flex;
+        justify-content: center;
+        margin: 40px 140px;
+    }
+    .body-mid-companion {
+        background-color: rgba(175, 212, 200, 0.9);
+        backdrop-filter: blur(3px);
+        justify-content: center;
+    }
+    .body-mid-companion > ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        border-bottom: 1px solid rgba(41, 53, 46, 0.452)
+    }
+    .body-mid-companion > ul > li {
+        list-style: none;
+        padding: 20px 70px;
+        border-bottom: 1px solid rgba(41, 53, 46, 0.452);
+        color: #134347;
+        font-family: 'Julius Sans One', sans-serif;
+    }
+    .body-mid-companion > ul > li:last-child{
+        border: 0px;
+    }
+    .body-bot {
+        background-color: aliceblue;
+        grid-row: 5 / 6;
+    }
+    .body-bot > div {
+        display: flex;
+        justify-content: center;
+        margin: 40px 140px;
+    }
+    .body-bot-companion {
+        background-color: rgb(222, 225, 228);
+    }
+    .body-bot-companion > div {
+        display: flex;
+        justify-content: flex-start;
+        margin: 40px 0px 40px 60px;
+    }
+    .footer-top {
+        grid-column: 1 / -1;
+        background-color: rgba(71, 167, 135, 0.5);
+        display: flex;
+        justify-content: space-around;
+        grid-row: 6 / 7;
+        backdrop-filter: blur(4px);
+    }
+    .footer-top > div {
+        margin: 60px;
+        padding: 0px 80px;
+        color: rgba(255, 255, 255, 0.568);
+        text-align: center;
+        font-style: italic;
+    }
+    #white-text {
+        color: #ffffffee;
+        font-style: normal;
+    }
+    
+    .footer-bot {
+        grid-column: 1 / -1;
+        background-color: #134347;
+        display: flex;
+        justify-content: space-evenly;
+        grid-row: 7 / 8;
+        height: 80px;
+        padding-top: 40px;
+    }
+    .material-symbols-outlined {
+        color: #ffffff93;
+
+    }
+}
+
+/* This is for the big screen
+
+x
+
+
+
+x
+
+
+x
+*/
+
+
+@media only screen and (min-width: 1001px) {
+    .container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: auto;
+        background-image: url('forest.jpg');
+    }
+    
+    .header-top {
+        display: flex;
+        background-color: rgba(71, 167, 135, 0.5);
+        height: 140px;
+        justify-content: center;
+        padding-top: 30px;
+        backdrop-filter: blur(4px);
+    }
+    .header-top > div > h1 {
+        font-size: 2em;
+        margin-bottom: 2px;
+        font-family: 'Julius Sans One', sans-serif;
+        color: rgb(255, 255, 255);
+        text-align: center;
+    }
+    .header-top > div > p {
+        font-size: 1.1em;
+        margin-top: 2px;
+        font-family: 'Libre Baskerville', sans-serif;
+        font-style: italic;
+        color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+    }
+    #oroboros {
+        padding-top: 10px;
+    }
+    
+    .header-bot {
+        background-color: rgba(71, 167, 135, 0.5);
+        justify-content: space-around;
+        font-family: 'Libre Baskerville', sans-serif;
+        backdrop-filter: blur(4px);
+        transition-property: all;
+        transition-duration: 500ms;
+    }
+    .header-bot > div:hover {
+        background-color: rgba(186, 204, 198, 0.582);
+    }
+    
+    .header-bot > div {
+        display: flex;
+        justify-content: center;
+        background-color: rgba(255, 255, 255, 0.247);
+        height: 40px;
+        padding-top: 25px;
+        transition-property: all;
+        transition-duration: 500ms;
+        margin-top: 50px;
+        width: 300px;
+        margin-left: 150px;
+    }
+    .header-bot > div > span {
+        height: 20px;
+        color: rgba(255, 255, 255, 0.9);
+        text-transform: uppercase;
+        font-weight: normal;
+        font-family: 'Julius Sans One', sans-serif;
+    }
+    .body-top {
+        background-color: aliceblue;
+    }
+    .body-top > div {
+        display: flex;
+        justify-content: center;
+        margin: 40px 140px;
+    }
+    .body-top-companion {
+        background-color: rgb(222, 225, 228);
+    }
+    .body-top-companion > ul {
+        display: grid;
+        width: 100%;
+        grid-template-columns: 1fr;
+        padding: 0;
+        margin: 0;
+    }
+    .body-top-companion > ul > li {
+        width: 40%;
+        list-style: none;
+        padding: 20px 0px;
+        margin-left: 90px;
+        border-bottom: 1px solid rgba(41, 53, 46, 0.712);
+        color: #134347;
+        font-style: normal;
+        text-transform: uppercase;
+        font-family: 'Julius Sans One', sans-serif;
+    }
+    .body-top-companion > ul > li:last-child {
+        border-bottom: 0px;
+        margin-bottom: 50px;
+    }
+    .body-top-companion > ul > li:first-child {
+        margin-top: 50px;
+    }
+    #fancy-by {
+        color: #999999a2;
+        font-family: 'Libre Baskerville', sans-serif;
+        font-style: italic;
+        text-transform: none;
+        font-size: .8em;
+    }
+    #fancy-name {
+        color: #4f6654;
+        font-family: 'Libre Baskerville', sans-serif;
+        font-style: normal;
+        text-transform: none;
+        font-size: .9em;
+    }
+    #designer-div {
+        border-bottom: 2px solid black;
+        padding-right: 120px;
+    }
+    .body-mid {
+        background-color: rgba(175, 212, 200, 0.9);
+        backdrop-filter: blur(3px);
+    }
+    .body-mid > div {
+        display: flex;
+        justify-content: center;
+        margin: 40px 140px;
+    }
+    .body-mid-companion {
+        background-color: rgba(155, 192, 180, 0.9);
+        backdrop-filter: blur(3px);
+        justify-content: center;
+    }
+    .body-mid-companion > ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+    .body-mid-companion > ul > li {
+        width: 40%;
+        list-style: none;
+        padding: 20px 0px;
+        margin-left: 90px;
+        border-bottom: 1px solid rgba(41, 53, 46, 0.452);
+        color: #134347;
+        font-family: 'Julius Sans One', sans-serif;
+    }
+    .body-mid-companion > ul > li:first-child{
+        border-top: 1px solid rgba(41, 53, 46, 0.452);
+        margin-top: 15%;
+    }
+    .body-mid-companion > ul > li:last-child{
+        margin-bottom: 15%;
+    }
+    .body-bot {
+        background-color: aliceblue;
+    }
+    .body-bot > div {
+        display: flex;
+        justify-content: center;
+        margin: 40px 140px;
+    }
+    .body-bot-companion {
+        background-color: rgb(222, 225, 228);
+    }
+    .body-bot-companion > div {
+        display: flex;
+        justify-content: flex-start;
+        margin: 40px 0px 40px 60px;
+    }
+    .footer-top {
+        grid-column: 1 / -1;
+        background-color: rgba(71, 167, 135, 0.5);
+        display: flex;
+        justify-content: space-around;
+        backdrop-filter: blur(4px);
+    }
+    .footer-top > div {
+        margin: 60px;
+        padding: 0px 80px;
+        color: rgba(255, 255, 255, 0.568);
+        text-align: center;
+        font-style: italic;
+    }
+    #white-text {
+        color: #ffffffee;
+        font-style: normal;
+    }
+    
+    .footer-bot {
+        grid-column: 1 / -1;
+        background-color: #134347;
+        display: flex;
+        justify-content: space-evenly;
+        grid-row: 7 / 8;
+        height: 80px;
+        padding-top: 40px;
+    }
+    .material-symbols-outlined {
+        color: #ffffff93;
+
+    }
+}
