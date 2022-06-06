@@ -1,0 +1,52 @@
+{
+    "appetizers": [{
+        "name": "hummus",
+        "ingredients": ["chickpeas", "garlic", "tahini", "love"],
+        "description": "A wonderfully smooth hummus. Try it with our pita chips!"
+    },
+    {
+        "name": "pita chips",
+        "ingredients": ["all-natural stone mill flour", "salt", "pepper", "sunflower oil"],
+        "description": "Crunchy and bustling with flavor. A perfect appetizer on their own, or with JSON's hummus!"
+    }],
+    "cold sandwiches": [{
+        "name": "greek gyro",
+        "ingredients": ["pita bread", "tomato", "tzatziki sauce", "lamb", "cucumber"],
+        "description": "Our signature sandwich. A classic greek gyro topped with cucumber and tomato."
+    },
+    {
+        "name": "italian sub",
+        "ingredients": ["white bread", "tomato", "lettuce", "banana peppers", "italian three-meat blend"],
+        "description": "Our take on an italian sub. Try it JSON's way for an added kick."
+    }],
+    "hot sandwiches": [{
+        "name": "meatball sub",
+        "ingredients": ["white bread", "tomato sauce", "lamb meatballs"],
+        "description": "Our famous lamb meatball sub! Toasted for 4 minutes - no more, no less."
+    },
+    {
+        "name": "curry doner kebab",
+        "ingredients": ["pita bread", "curry sauce", "tomato", "grilled chicken kabob"],
+        "description": "An indian twist on the classic doner kebab."
+    }],
+    "desserts": [{
+        "name": "lava cake",
+        "ingredients": ["chocolate", "flour", "sugar"],
+        "description": "A wonderful lava cake. Served warm, with molten chocolate!"
+    },
+    {
+        "name": "giant m&m cookie",
+        "ingredients": ["chocolate", "flour", "sugar", "m&ms"],
+        "description": "A HUGE m&m cookie!"
+    }],
+    "drinks": [{
+        "name": "coca cola",
+        "ingredients": ["Carbonated water", "cola syrup", "we're not really sure"],
+        "description": "An ice cold coca cola."
+    },
+    {
+        "name": "dr. pepper",
+        "ingredients": ["Carbonated water", "cola syrup", "we're not really sure"],
+        "description": "He's got a PhD!"
+    }]
+}

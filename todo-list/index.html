@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet"/> 
+</head>
+<body>
+    <div id=main-container>
+        <div id="header">To Do List</div>
+        <form name="todo-form" class="todo-form">
+            <input type="text" name="title" placeholder="Insert todo title here..." required/>
+            <input type="text" name="description" placeholder="Insert description here..." required/>
+            <input type="number" name="price" placeholder="Insert price here..." required/>
+            <input type="text" name="image" placeholder="Insert image url here..." />
+            <button>Submit</button>
+        </form>
+        <div id="todo-list">
+   
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
