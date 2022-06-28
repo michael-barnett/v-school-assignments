@@ -4,7 +4,7 @@ html {
 }
 input[type=checkbox]:checked+div {
     text-decoration: line-through;
-    background-color: beige;
+    background-color: rgba(50, 177, 12, 0.384)
 }
 body {
     margin: 0;
@@ -14,6 +14,8 @@ body {
     background-repeat: no-repeat;
     font-family: 'Kanit', sans-serif;
     text-transform: uppercase;
+    transition-duration: 1s;
+    transition-property: color;
 }
 
 .todo-form{
@@ -36,32 +38,43 @@ body {
     width: 100%;
     justify-self: center;
 }
+#todo-list > :last-child{
+    margin-bottom: 10px;
+}
+#todo-list > :first-child{
+    margin-top: 10px;
+}
 .innerContainer {
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    width: 90%;
     background-color: rgba(218, 218, 218, 0.829);
     border-radius: 5px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    transition-duration: 300ms;
+    transition-property: background-color;
+    margin: 0px 8px;
+    padding: 0px 10px;
 }
 
 #checkbox{
     justify-self: flex-start;
+    height: 100%;
 }
 #deleteButton {
-    display: flex;
     float: right;
-    justify-self: end;
+    width: 10%;
+    height: 100%;
+    transition-duration: 1s;
+    transition-property: background-color;
+    background-color: rgba(218, 218, 218, 0.829);
+    border: 0px;
+    border-radius: 5px;
+    margin-right: 5px;
 }
 #deleteButton:hover {
-	background:linear-gradient(to bottom, #bc3315 5%, #d0451b 100%);
 	background-color:#bc3315;
 }
-#deleteButton:active {
-	position:relative;
-	top:1px;
-}
-
 
 .tasklist {
     margin: 10px 10%;

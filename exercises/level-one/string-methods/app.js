@@ -8,11 +8,11 @@
 
 // 
 
-// function halfStringLength(string){
-//     var slicerNum = Math.floor(string.length / 2);
-//     var firstHalf = string.slice(0, slicerNum).toUpperCase();
-//     var secondHalf = string.slice(slicerNum, string.length).toLowerCase();
-//     console.log(firstHalf + secondHalf)
-// }
+function halfStringLength(string){
+    var slicerNum = Math.floor(string.length / 2);
+    var firstHalf = string.slice(0, slicerNum).toUpperCase();
+    var secondHalf = string.slice(slicerNum, string.length).toLowerCase();
+    console.log(firstHalf + secondHalf)
+}
 
-// halfStringLength("HeLLo WoRld")
+halfStringLength("HeLLo")

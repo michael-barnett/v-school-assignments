@@ -14,19 +14,19 @@ function listData(data){
         const div = document.createElement('div')
         div.setAttribute("id", `${data[i]._id}`)
         if (data[i].completed === true && !data[i].imgUrl){
-            div.innerHTML = `<input type="checkbox" name="complete" id="checkbox" checked/><div class="innerContainer" id=><h1>${data[i].title} </h1><h4>${data[i].description}</h4><h4>${data[i].price}</h4></div><button name="deleteButton" id=deleteButton>Delete</button>`;
+            div.innerHTML = `<input type="checkbox" name="complete" id="checkbox" checked/><div class="innerContainer" id=><p>${data[i].title} </p><p>${data[i].description}</p><p>${data[i].price}</p></div><button name="deleteButton" id=deleteButton>Delete</button>`;
             document.getElementById('todo-list').appendChild(div)
         }
         if (data[i].completed === false && !data[i].imgUrl){
-            div.innerHTML = `<input type="checkbox" name="complete" id="checkbox"><div class="innerContainer" id=><h1>${data[i].title} </h1><h4>${data[i].description}</h4><h4>${data[i].price}</h4></div><button name="deleteButton" id=deleteButton>Delete</button>`;
+            div.innerHTML = `<input type="checkbox" name="complete" id="checkbox"><div class="innerContainer" id=><p>${data[i].title} </p><p>${data[i].description}</p><p>${data[i].price}</p></div><button name="deleteButton" id=deleteButton>Delete</button>`;
             document.getElementById('todo-list').appendChild(div)
         }
         if (data[i].completed === true && data[i].imgUrl){
-            div.innerHTML = `<input type="checkbox" name="complete" id="checkbox" checked/><div class="innerContainer" id=><h1>${data[i].title} </h1><h4>${data[i].description}</h4><h4>${data[i].price}</h4><img src=${data[i].imgUrl} height="50px" width="50px"></div><button name="deleteButton" id=deleteButton>Delete</button>`;
+            div.innerHTML = `<input type="checkbox" name="complete" id="checkbox" checked/><div class="innerContainer" id=><p>${data[i].title} </p><p>${data[i].description}</p><p>${data[i].price}</p><img src=${data[i].imgUrl} height="50px" width="50px"></div><button name="deleteButton" id=deleteButton>Delete</button>`;
             document.getElementById('todo-list').appendChild(div)
         }
         if (data[i].completed === false && data[i].imgUrl){
-            div.innerHTML = `<input type="checkbox" name="complete" id="checkbox"><div class="innerContainer" id=><h1>${data[i].title} </h1><h4>${data[i].description}</h4><h4>${data[i].price}</h4><img src=${data[i].imgUrl} height="50px" width="50px"></div><button name="deleteButton" id=deleteButton>Delete</button>`;
+            div.innerHTML = `<input type="checkbox" name="complete" id="checkbox"><div class="innerContainer" id=><p>${data[i].title} </p><p>${data[i].description}</p><p>${data[i].price}</p><img src=${data[i].imgUrl} height="50px" width="50px"></div><button name="deleteButton" id=deleteButton>Delete</button>`;
             document.getElementById('todo-list').appendChild(div)
         }
     }
@@ -76,4 +76,13 @@ document.addEventListener('click', function(e){
     if(e.target.checked === false){
         axios.put(`https://api.vschool.io/mikebarnett/todo/${e.target.parentElement.id}`, {completed: false})
     }
+    //experimenting
+    // if(!e.target.previousSibling.checked){
+    //     axios.put(`https://api.vschool.io/mikebarnett/todo/${e.target.parentElement.id}`, {completed: true})
+    //     e.target.previousSibling.checked = true
+    // }
+    // if(e.target.previousSibling.checked === true){
+    //     axios.put(`https://api.vschool.io/mikebarnett/todo/${e.target.parentElement.id}`, {completed: false})
+    //     e.target.previousSibling.checked = false
+    // }
 })
