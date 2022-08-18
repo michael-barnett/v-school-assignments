@@ -18,7 +18,7 @@ export default function MainList(){
     )
 
     return (
-        <div>
+        <div className="list--container">
             {listElement}
         </div>
     )

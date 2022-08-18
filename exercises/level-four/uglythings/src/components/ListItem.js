@@ -1,18 +1,46 @@
-import React, {useContext} from "react"
+import React, {useContext, useState} from "react"
 import { ThemeContext } from "../ThemeContext";
 
 export default function ListItem(props){
-   
-    const {handleDelete, handleEdit} = useContext(ThemeContext)
+   const {handleDelete, handleEdit, editUglyThing, newInput, setNewInput} = useContext(ThemeContext)
+    const {title, description, imgUrl} = props
+
+
+    function handleChange(event){
+        const {name, value} = event.target
+        setNewInput(prevThing => ({...prevThing, [name]: value}))
+    }
+    
+
+    
+    const [editMode, setEditMode] = useState(false)
+    function editThing(e){
+        editUglyThing(props.id, newInput)
+        setNewInput({
+            title: "",
+            description: ""
+        })
+        setEditMode(false)
+    }
 
     return (
-        <div id={props.id}>
-            <h1>{props.title}</h1>
-            <h3>{props.description}</h3>
+        <>
+        {!editMode && <div id={props.id} className="list--container">
+            <h1>{title}</h1>
+            <img src={imgUrl} height="200px" />
+            <h3>{description}</h3>
+            <button onClick={() => handleDelete(props.id)}>Delete</button>
+            <button onClick={setEditMode}>Edit</button>
+        </div>}
+
+        {editMode && <div className="list--container">
+            <input placeholder="" onChange={handleChange} name="title" value={newInput.title} required/>
             <img src={props.imgUrl} height="200px" />
-            <button onClick={handleDelete}>Delete</button>
-            <button onClick={handleEdit}>Edit</button>
-        </div> 
+            <input placeholder="" onChange={handleChange} name="description" value={newInput.description} required/>
+            <button onClick={editThing}>Save</button>
+            </div>}
+
+        </>
     )}
 
 

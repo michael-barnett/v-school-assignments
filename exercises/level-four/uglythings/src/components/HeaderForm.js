@@ -5,7 +5,7 @@ const axios = require("axios")
 export default function HeaderForm(){
 
 
-    const {setDependencyCount} = useContext(ThemeContext)
+    const {postUglyThing} = useContext(ThemeContext)
     const [formData, setFormData] = useState({
         title: "",
         description: "",
@@ -24,17 +24,23 @@ export default function HeaderForm(){
 
     function handleSubmit(e){
         e.preventDefault();
-        setDependencyCount(prevDependencyCount => prevDependencyCount + 1)
-        axios.post("https://api.vschool.io/mikebarnett/thing", formData);
+        postUglyThing(formData);
+        console.log("working")
+        setFormData({
+            title: "",
+            description: "",
+            imgUrl: "",
+            })
     }
     
     return(
-        <div>
+        <div className="header--container">
             <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="title" onChange={handleChange} name="title" value={formData.title} required/>
-                <input type="text" placeholder="img URL" onChange={handleChange} name="imgUrl" value={formData.imgUrl} required />
-                <input type="text" placeholder="Description (Why is this ugly?" onChange={handleChange} name="description" value={formData.description} required/>
-                <button>Submit</button>
+                <input className="header--input" type="text" placeholder="Title" onChange={handleChange} name="title" value={formData.title} required/>
+                <input className="header--input" type="text" placeholder="Img URL" onChange={handleChange} name="imgUrl" value={formData.imgUrl} required />
+                <input className="header--input" type="text" placeholder="Description" onChange={handleChange} name="description" value={formData.description} required/>
+                <div className="break"></div>
+                <button className="header--button">Submit</button>
             </form>
         </div>
     )
