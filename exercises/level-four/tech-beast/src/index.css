@@ -1,0 +1,119 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 40px;
+  height: 0;
+}
+
+.navbar--icons {
+  filter: invert(83%) sepia(32%) saturate(111%) hue-rotate(188deg) brightness(107%) contrast(104%);
+  transition: all 200ms;
+}
+
+.navbar--icons:hover {
+  transform: scale(1.2);
+}
+
+.banner--container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(../public/images/background.jpg);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 45px 40px -7px;
+  padding-top: 60px;
+}
+
+.banner--header{
+  font-size: 80px;
+  margin: 0;
+  padding: 0;
+  color: aliceblue;
+}
+.banner--container--about {
+  display: flex;
+  background-image: url(../public/images/background.jpg);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 45px 40px -7px;
+  padding-top: 60px;
+  padding-left: 10%;
+}
+
+.banner--about {
+  font-size: 80px;
+  margin: 0;
+  padding: 0;
+  color: aliceblue;
+  height: 226px;
+}
+
+.banner--input {
+  text-indent: 5%;
+  border: 2px solid aliceblue;
+  height: 40px;
+  width: 350px;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.about--text {
+  padding-left: 40px;
+  padding-top: 40px;
+  width: 30%;
+}
+
+.article--container {
+  display: flex;
+  overflow-x: scroll;
+  padding-top: 100px;
+  /* white-space: nowrap; */
+  padding-left: 40px;
+}
+
+.article--subcontainer{
+  /* display: flex; */
+  box-shadow: 0px 0px 28px 9px rgba(8,8,8,0.16);
+  margin-left: 10px;
+  overflow-x: auto;
+  min-width: 400px;
+  max-height: 400px;
+  margin: 20px;
+}
+
+.article--title {
+  font-size: 18px;
+  border-bottom: 1px solid black;
+  margin-left: 10px;
+  margin-right: 10px;
+  white-space: normal;
+  min-height: 100px;
+  margin-bottom: 0;
+}
+
+.article--description { 
+  /* overflow: hidden;
+  white-space: hidden; */
+  text-overflow: ellipsis;
+}
+
+.article--source { 
+  text-align: end;
+  padding-right: 10%;
+  margin: 0;
+  margin-top: 4px;
+}
+
+.keyword--search {
+  position: relative;
+  top: -73px;
+  right: -140px;
+}
