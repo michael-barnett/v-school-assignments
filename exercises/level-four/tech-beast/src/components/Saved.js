@@ -1,6 +1,21 @@
 import { AnimatePresence, motion } from 'framer-motion'
-
+import { useContext } from 'react'
+import { ThemeContext } from '../ThemeContext'
+import Article from './Article'
 export default function Saved(){
+    
+    const {savedArticles} = useContext(ThemeContext)
+    const savedArticleElement = savedArticles.map(article => 
+    <Article 
+        key={article.title}
+        itemId={article.title}
+        title={article.title}
+        description={article.description}
+        source={article.source}
+        link={article.link} 
+    />)
+    
+    
     return (
         <>
         <motion.div
@@ -13,9 +28,7 @@ export default function Saved(){
                 <h1 className="banner--header">Saved Articles</h1>
                 <input placeholder="Keyword Search:" className="banner--input"></input>
             </div>
-            <div className='about--text'>
-                
-            </div>
+            <div className='article--container'>{savedArticleElement}</div>
         </motion.div>
         </>
     )

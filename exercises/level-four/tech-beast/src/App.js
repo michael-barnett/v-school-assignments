@@ -1,6 +1,7 @@
 import React from 'react'
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
 import AnimatedRoutes from './components/AnimatedRoutes.js';
+import {ThemeContextProvider} from "./ThemeContext";
 
 export default function App() {
   return (
@@ -16,7 +17,10 @@ export default function App() {
           <img alt='Saved Icon' src='./images/note_FILL0_wght400_GRAD0_opsz48.svg' className='navbar--icons' />
         </Link>
       </nav>
-      <AnimatedRoutes />
+      <ThemeContextProvider>
+        <AnimatedRoutes />
+      </ThemeContextProvider>
+      
     </Router>
   );
 }
