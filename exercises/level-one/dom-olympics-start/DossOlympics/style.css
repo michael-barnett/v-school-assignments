@@ -1,0 +1,58 @@
+.header {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.theme-one{
+    background-color:blue/brown;
+}
+
+.theme-two{
+    background-color: red/black;
+}
+
+.name {
+    color: blueviolet;
+    font-weight: bold;
+    font-style: underline;
+    font-size: larger;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin: 10px 0px;
+    padding: 20px;
+}
+
+#main {
+    margin: 30px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.message {
+    padding: 5px;
+}
+
+.right {
+    align-self: flex-end;
+    background-color: lightblue;
+}
+
+.left {
+    align-self: flex-start;
+    background-color: burlywood;
+}
+
+.top {
+    align-self: flex-start;
+    background-color: burlywood;
+}
+
+.bottom{
+    align-self: flex-start;
+    background-color: lightblue;
+}

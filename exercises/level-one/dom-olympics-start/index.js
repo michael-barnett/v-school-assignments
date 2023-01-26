@@ -13,6 +13,7 @@ document.getElementById("secondSpan").style.fontSize = "20px"
 // Write some custom JavaScript to automatically change the words of the conversation to something fun and good.
 // Write some JavaScript that will wait until the user clicks the "clear" button, and then clears out all conversation.
 let conversation = document.querySelectorAll("div.messages > div")
+console.log(conversation)
 // This changes the text by editing the text content of the div (with class "messages") as an array
 conversation[0].textContent = "Hey man, I'm having a barbecue for the 4th of July, want to come over?"
 conversation[1].textContent = "Sure, that sounds awesome! What time?"
